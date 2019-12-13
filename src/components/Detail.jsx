@@ -5,16 +5,22 @@ import edit from '../assets/icons/edit.svg';
 import chat from '../assets/icons/chat.svg';
 import tick from '../assets/icons/tick.svg';
 
-function Detail() {
-  return (
+function Detail(props) {
+  const {
+    name,
+    nmls,
+    city,
+    state
+  } = props.detail;
+  return (   
     <section className='detail col-12 col-xl-3'>
       <div className='detail__top'>
           <img src={avatar} className='detail__hero' alt='avatar' />
-        <h2>Elise Beverley</h2>
-        <p className='detail__id'>NMLS #9418074</p>
+        <h2>{name}</h2>
+        <p className='detail__id'>NMLS #{nmls}</p>
         <div className='detail__location'>
           <img className='detail__location-icon' src={location} alt='location'/>
-          <p className='detail__location-text'>San Francisco, CA</p>
+          <p className='detail__location-text'>{city}, {state}</p>
         </div>
         <button className='detail__button'>
           <img src={edit} alt='edit'/>
