@@ -7,7 +7,7 @@ import tick from '../assets/icons/tick.svg';
 
 function Detail() {
   return (
-    <section className='detail col-3'>
+    <section className='detail col-12 col-xl-3'>
       <div className='detail__top'>
           <img src={avatar} className='detail__hero' alt='avatar' />
         <h2>Elise Beverley</h2>
@@ -29,8 +29,12 @@ function Detail() {
       </p>
       <div className='detail__language'>
         <h3>THE LANGUAGES I SPEAK:</h3>
-        <span>English</span>
-        <span>Spanish</span>
+        <ul>
+          <li>English
+          </li>
+          <li>Spanish
+          </li>
+        </ul>
       </div>
       <div className='detail__services'>
         <h3>THE SERVICES I OFFER:</h3>
