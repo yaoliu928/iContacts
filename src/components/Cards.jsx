@@ -1,11 +1,11 @@
 import React from 'react';
 import avatar from '../assets/avatars/avatar.png';
 import location from '../assets/icons/location.svg';
-import google from '../assets/logos/google.svg';
+import slack from '../assets/logos/slack.svg';
 
 function Cards() {
   return (
-    <section className='col-9 cards'>
+    <section className='cards col-9'>
       <ul className='row'>
         <li className='col-3'>
           <div className='single-card'>
@@ -22,7 +22,7 @@ function Cards() {
               <div className='single-card__location'>
                 <img className='single-card__location-icon' src={location} alt='location'/>
                 <p>San Francisco, CA</p>
-                <img className='single-card__location-logo' src={google} alt='google'/>
+                <img className='single-card__location-logo' src={slack} alt='slack'/>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ function Cards() {
               <div className='single-card__location'>
                 <img className='single-card__location-icon' src={location} alt='location'/>
                 <p>San Francisco, CA</p>
-                <img className='single-card__location-logo' src={google} alt='google'/>
+                <img className='single-card__location-logo' src={slack} alt='slack'/>
               </div>
             </div>
           </div>
@@ -62,12 +62,12 @@ function Cards() {
             <div className='single-card__location'>
               <img className='single-card__location-icon' src={location} alt='location'/>
               <p>San Francisco, CA</p>
-              <img className='single-card__location-logo' src={google} alt='google'/>
+              <img className='single-card__location-logo' src={slack} alt='slack'/>
             </div>
           </div>
         </div>
       </li>
-      <li className='col-3'>
+        <li className='col-3'>
       <div className='single-card'>
         <div >
           <img className='single-card__hero' src={avatar} alt='avatar' />
@@ -82,7 +82,7 @@ function Cards() {
           <div className='single-card__location'>
             <img className='single-card__location-icon' src={location} alt='location'/>
             <p>San Francisco, CA</p>
-            <img className='single-card__location-logo' src={google} alt='google'/>
+            <img className='single-card__location-logo' src={slack} alt='slack'/>
           </div>
         </div>
       </div>

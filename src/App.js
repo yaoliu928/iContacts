@@ -10,12 +10,11 @@ class App extends React.Component {
   }
   render() {
     return (
-        <div className='row '>
+        <div className='contain row'>
           <Cards />
           <Detail />  
         </div>
     );
   } 
 }
-
 export default App;
