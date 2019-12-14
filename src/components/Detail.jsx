@@ -10,8 +10,17 @@ function Detail(props) {
     name,
     nmls,
     city,
-    state
+    state,
+    info,
   } = props.detail;
+  //const test = props.languages;
+  //const test1 = [...test];
+  //const test2 = ['English', 'Spanish', 'Spanish', 'Spanish'];
+  //if (test!==test2) { console.log('not equal');}
+  //console.log(test);
+  //console.log(test1);
+  //console.log(test2);
+
   return (   
     <section className='detail col-12 col-xl-3'>
       <div className='detail__top'>
@@ -31,15 +40,19 @@ function Detail(props) {
           <p>Chat</p>
         </button>
       </div>
-      <p className='detail__info'>A loan officer is a representative of a bank,credits union,or other financial institutions who finds and assists borrowers in acquiring loans. Loan officers can work with a wide variety of lending products for both consumers and businesses.
+      <p className='detail__info'>{info}
       </p>
       <div className='detail__language'>
         <h3>THE LANGUAGES I SPEAK:</h3>
         <ul>
-          <li>English
-          </li>
-          <li>Spanish
-          </li>
+          {
+            //console.log(props.languages)
+            props.languages.map(language => {
+              return (
+                <li>{language}</li>
+              )
+            })
+          }
         </ul>
       </div>
       <div className='detail__services'>

@@ -20,6 +20,9 @@
         border: 1px solid #eee;
         border-radius: 5px;
         box-shadow: 0px 1px 4px 0px #eee;
+        &--active {
+          border: 2px solid rgb(46, 191, 126);
+        }
         &__hero {
           width: 35px;
           border-radius: 50%;
@@ -172,5 +175,4 @@
     }
   } 
 }
-  
   

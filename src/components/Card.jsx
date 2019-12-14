@@ -3,12 +3,16 @@ import avatar from '../assets/avatars/avatar.png';
 import location from '../assets/icons/location.svg';
 import slack from '../assets/logos/slack.svg';
 function Card(props) {
+  const active =
+    props.activeId === props.id
+      ? 'single-card--active'
+      : '';
   return (
-    <li onClick={() => {
-      props.handleClick(props.id);
-    console.log(props.id);
-    }} className='col-12 col-sm-6 col-lg-3'>
-      <div className='single-card'>
+    <li className='col-12 col-sm-6 col-lg-3'>
+      <div
+        className={`single-card ${active}`}
+        onClick={() => { props.handleClick(props.id); }}      
+      >
         <div >
           <img className='single-card__hero' src={avatar} alt='avatar' />
             <div className='single-card__name'>

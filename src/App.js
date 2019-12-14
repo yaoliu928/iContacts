@@ -7,17 +7,22 @@ class App extends React.Component {
     super(props);
     this.state = {
       contacts: [],
-      detail: {}
+      detail: {},
+      activeId: ''
     };
   }
   componentDidMount() {
-    this.setState({ contacts, detail: contacts[0] });
+    this.setState({
+      contacts,
+      detail: contacts[1]
+    });
   }
   handleClick = (clickId) => {
     this.setState({
       detail: contacts.find(
         ({ id } )=> id === clickId
-      )
+      ),
+      activeId: clickId
     });
     console.log(this.state.detail);
   }
@@ -27,9 +32,12 @@ class App extends React.Component {
           <Cards
             contacts={this.state.contacts}
             handleClick={this.handleClick}
+            activeId={this.state.activeId}
           />
           <Detail
-            detail={this.state.detail}
+          detail={this.state.detail}
+          languages={this.state.detail.languages}
+          
           />  
         </div>
     );

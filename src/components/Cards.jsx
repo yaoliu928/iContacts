@@ -16,6 +16,7 @@ function Cards(props) {
                 city={contact.city}
                 state={contact.state}
                 handleClick={props.handleClick}
+                activeId={props.activeId}
               />
             )
           })

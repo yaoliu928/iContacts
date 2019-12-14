@@ -1,5 +1,5 @@
-//import uuid from 'uuid/v1';
-const data = [
+
+const contacts = [
   {
     id: 1,
     name: 'Chris Winnie',
@@ -16,8 +16,8 @@ const data = [
     nmls: '9418074',
     city: 'San Francisco',
     state: 'CA',
-    info: 'A loan officer is a representative of a bank,credits union,or other financial institutions who finds and assists borrowers in acquiring loans. Loan officers can work with a wide variety of lending products for both consumers and businesses.',
-    languages: ['English', 'Spanish', 'Spanish', 'Spanish'],
+    info: 'B loan officer is a representative of a bank,credits union,or other financial institutions who finds and assists borrowers in acquiring loans. Loan officers can work with a wide variety of lending products for both consumers and businesses.',
+    languages: ['English', , 'Spanish'],
     services: ['Conventional', 'Bad Credit', 'Conventional', 'Conventional']
   },
   {
@@ -37,7 +37,7 @@ const data = [
     city: 'Mountain View',
     state: 'CA',
     info: 'A loan officer is a representative of a bank,credits union,or other financial institutions who finds and assists borrowers in acquiring loans. Loan officers can work with a wide variety of lending products for both consumers and businesses.',
-    languages: ['English', 'Spanish', 'Spanish', 'Spanish'],
+    languages: ['English', 'Spanish'],
     services: ['Conventional', 'Bad Credit', 'Conventional', 'Conventional']
   },
   {
@@ -201,4 +201,4 @@ const data = [
     services: ['Conventional', 'Bad Credit', 'Conventional', 'Conventional']
   },
 ];
-export default data;
+export default contacts;
