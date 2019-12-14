@@ -1,5 +1,5 @@
 
-const contacts = [
+const Contacts = [
   {
     id: 1,
     name: 'Chris Winnie',
@@ -201,4 +201,4 @@ const contacts = [
     services: ['Conventional', 'Bad Credit', 'Conventional', 'Conventional']
   },
 ];
-export default contacts;
+export default Contacts;

@@ -7,12 +7,10 @@ function Card(props) {
     props.activeId === props.id
       ? 'single-card--active'
       : '';
+ 
   return (
     <li className='col-12 col-sm-6 col-lg-3'>
-      <div
-        className={`single-card ${active}`}
-        onClick={() => { props.handleClick(props.id); }}      
-      >
+      <div className={`single-card ${active}`}>
         <div >
           <img className='single-card__hero' src={avatar} alt='avatar' />
             <div className='single-card__name'>
@@ -21,13 +19,17 @@ function Card(props) {
               <p>NMLS #{props.nmls}
               </p>
             </div>
-        </div>
+            </div>
         <div className='single-card__location'>
           <img className='single-card__location-icon' src={location} alt='location'/>
           <p>{props.city}, {props.state}</p>
           <img className='single-card__location-logo' src={slack} alt='slack'/>
-        </div>
+        </div>              
       </div>
+        <div className='single-card--hover'>
+          <button onClick={() => { props.handleClick(props.id); }}>view</button>
+          <button onClick={() => { props.handleRemove(props.id); }}>remove</button>
+        </div>  
     </li>
   )
 }
