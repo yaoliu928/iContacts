@@ -9,14 +9,12 @@ function AddCardButton(props) {
       </div> 
       <div className='single-card--hover'>
         <Link
-          to={{
-            pathname: '/add',
-            linkProps: props
-          }}                 
+          to='/add'
+          //handleChange={props.handleChange}
+          //input={props.input}
         >
           <button
             className='single-card__button single-card__button--add'
-            onClick
             >Add</button>
         </Link>
       </div>

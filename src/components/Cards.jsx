@@ -19,12 +19,16 @@ function Cards(props) {
                 state={contact.state}
                 activeId={props.activeId}
                 handleClick={props.handleClick}
-                handleRemove={props.handleRemove} 
+                handleRemove={props.handleRemove}
+                
               />
             )
           })
         }
-        <AddCardButton />
+        <AddCardButton
+          //handleChange={props.handleChange}
+          //input={props.input}
+        />
       </ul>
     </section>
   )

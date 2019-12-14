@@ -10,7 +10,8 @@ class Home extends React.Component {
       contacts,
       detail: contacts[0],
       activeId: '',
-      blank: false
+      blank: false,
+      //input:'fefe'
     };
   }
   handleClick = (clickId) => {
@@ -42,6 +43,11 @@ class Home extends React.Component {
       })
     };
   };
+  handleChange = (e) => {
+    this.setState({
+      input:e.target.value
+    })
+  }
 
   render() {
     return (
@@ -54,11 +60,14 @@ class Home extends React.Component {
                 contacts={this.state.contacts}
                 handleClick={this.handleClick}
                 handleRemove={this.handleRemove}
-                activeId={this.state.activeId}
+              activeId={this.state.activeId}
+              //handleChange={this.handleChange}
+              //input={this.state.input}
               />
               <Detail
                 detail={this.state.detail}
-              />
+            />
+           
           </div>
       }
       </div>
