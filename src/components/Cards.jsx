@@ -1,10 +1,12 @@
 import React from 'react';
 import Card from './Card';
+import AddCardButton from './AddCardButton';
 
 function Cards(props) {
   return (
     <section className='cards col-12 col-xl-9'>
       <ul className='row'>
+        
         {
           props.contacts.map(contact => {
             return (
@@ -22,7 +24,7 @@ function Cards(props) {
             )
           })
         }
-        
+        <AddCardButton />
       </ul>
     </section>
   )
