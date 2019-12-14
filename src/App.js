@@ -6,16 +6,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contacts: [],
-      detail: {},
+      contacts,
+      detail: contacts[0],
       activeId: ''
     };
-  }
-  componentDidMount() {
-    this.setState({
-      contacts,
-      detail: contacts[1]
-    });
   }
   handleClick = (clickId) => {
     this.setState({
@@ -24,7 +18,7 @@ class App extends React.Component {
       ),
       activeId: clickId
     });
-    console.log(this.state.detail);
+    //console.log(this.state.detail);
   }
   render() {
     return (
@@ -36,8 +30,6 @@ class App extends React.Component {
           />
           <Detail
           detail={this.state.detail}
-          languages={this.state.detail.languages}
-          
           />  
         </div>
     );

@@ -3,7 +3,8 @@ import avatar from '../assets/avatars/avatar.png';
 import location from '../assets/icons/location.svg';
 import edit from '../assets/icons/edit.svg';
 import chat from '../assets/icons/chat.svg';
-import tick from '../assets/icons/tick.svg';
+import Language from './Language';
+import Service from './Service';
 
 function Detail(props) {
   const {
@@ -12,15 +13,9 @@ function Detail(props) {
     city,
     state,
     info,
+    languages,
+    services
   } = props.detail;
-  //const test = props.languages;
-  //const test1 = [...test];
-  //const test2 = ['English', 'Spanish', 'Spanish', 'Spanish'];
-  //if (test!==test2) { console.log('not equal');}
-  //console.log(test);
-  //console.log(test1);
-  //console.log(test2);
-
   return (   
     <section className='detail col-12 col-xl-3'>
       <div className='detail__top'>
@@ -46,10 +41,12 @@ function Detail(props) {
         <h3>THE LANGUAGES I SPEAK:</h3>
         <ul>
           {
-            //console.log(props.languages)
-            props.languages.map(language => {
+            languages.map((language, index) => {
               return (
-                <li>{language}</li>
+                <Language
+                key={index}
+                language={language}
+                />
               )
             })
           }
@@ -58,18 +55,32 @@ function Detail(props) {
       <div className='detail__services'>
         <h3>THE SERVICES I OFFER:</h3>
         <ul className='row'>
-          <li className='col-6'>
-            <img src={tick} alt='tick' />
-            <p>Conventional</p>
-          </li>
-          <li className='col-6'>
-            <img src={tick} alt='tick'/>
-            <p>Minorities</p>
-          </li>
-          <li className='col-6'>
-            <img src={tick} alt='tick'/>
-            <p>Bad Credit</p>
-          </li>
+          {
+            services.map(
+              (service, index) => {
+                return (
+                  <Service
+                    key={index}
+                    service={service}
+                  />
+                )
+              }
+            )
+          }
+          {
+            // <li className='col-6'>
+            //   <img src={tick} alt='tick' />
+            //   <p>Conventional</p>
+            // </li>
+            // <li className='col-6'>
+            //   <img src={tick} alt='tick' />
+            //   <p>Minorities</p>
+            // </li>
+            // <li className='col-6'>
+            //   <img src={tick} alt='tick' />
+            //   <p>Bad Credit</p>
+            // </li>
+          }
         </ul>
       </div>
     </section>

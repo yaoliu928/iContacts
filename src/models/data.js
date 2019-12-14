@@ -17,8 +17,8 @@ const contacts = [
     city: 'San Francisco',
     state: 'CA',
     info: 'B loan officer is a representative of a bank,credits union,or other financial institutions who finds and assists borrowers in acquiring loans. Loan officers can work with a wide variety of lending products for both consumers and businesses.',
-    languages: ['English', , 'Spanish'],
-    services: ['Conventional', 'Bad Credit', 'Conventional', 'Conventional']
+    languages: ['English' , 'Spanish'],
+    services: ['Conventional', 'Bad Credit', 'Minorities', 'Conventional']
   },
   {
     id: 3,
