@@ -2,7 +2,6 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
 }
 .cards {
   padding: 50px 20px 0;
@@ -58,6 +57,7 @@
           }
           &--add {
             background: #4343f4;
+            width: 100%
           }  
         }
         &--active {
@@ -155,6 +155,7 @@
     margin: 4px;
     background-color: rgb(46, 191, 126);
     border-radius: 25px;
+    border: none;
     &:focus {
       outline: 0;
     }   
@@ -221,11 +222,14 @@
     }
   } 
 }
-.empty {  
+.notice {  
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 60px;
   color: #999;
+}
+.form-container {
+  padding: 50px;
 }

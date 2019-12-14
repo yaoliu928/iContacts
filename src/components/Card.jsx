@@ -14,7 +14,7 @@ function Card(props) {
         <div >
           <img className='single-card__hero' src={avatar} alt='avatar' />
             <div className='single-card__name'>
-              <h6>{props.name}
+              <h6>{props.firstName} {props.lastName} 
               </h6>
               <p>NMLS #{props.nmls}
               </p>

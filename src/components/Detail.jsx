@@ -8,7 +8,8 @@ import Service from './Service';
 
 function Detail(props) {
   const {
-    name,
+    firstName,
+    lastName,
     nmls,
     city,
     state,
@@ -20,7 +21,7 @@ function Detail(props) {
     <section className='detail col-12 col-xl-3'>
       <div className='detail__top'>
           <img src={avatar} className='detail__hero' alt='avatar' />
-        <h2>{name}</h2>
+        <h2>{firstName} {lastName}</h2>
         <p className='detail__id'>NMLS #{nmls}</p>
         <div className='detail__location'>
           <img className='detail__location-icon' src={location} alt='location'/>
@@ -66,20 +67,6 @@ function Detail(props) {
                 )
               }
             )
-          }
-          {
-            // <li className='col-6'>
-            //   <img src={tick} alt='tick' />
-            //   <p>Conventional</p>
-            // </li>
-            // <li className='col-6'>
-            //   <img src={tick} alt='tick' />
-            //   <p>Minorities</p>
-            // </li>
-            // <li className='col-6'>
-            //   <img src={tick} alt='tick' />
-            //   <p>Bad Credit</p>
-            // </li>
           }
         </ul>
       </div>
