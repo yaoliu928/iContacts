@@ -1,8 +1,8 @@
 import React from 'react';
-import avatar from '../assets/avatars/avatar.png';
-import location from '../assets/icons/location.svg';
-import edit from '../assets/icons/edit.svg';
-import chat from '../assets/icons/chat.svg';
+import avatar from '../../assets/avatars/avatar.png';
+import location from '../../assets/icons/location.svg';
+import edit from '../../assets/icons/edit.svg';
+import chat from '../../assets/icons/chat.svg';
 import Language from './Language';
 import Service from './Service';
 

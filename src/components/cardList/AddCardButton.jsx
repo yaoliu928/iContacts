@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function AddCardButton(props) {
+function AddCardButton() {
   return (
     <li className='col-12 col-sm-6 col-lg-3'>
       <div className='single-card single-card--new'>

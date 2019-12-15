@@ -1,5 +1,5 @@
 import React from 'react';
-import santa from '../assets/icons/santa.svg';
+import santa from '../../assets/icons/santa.svg';
 
 function Empty() {
   return (

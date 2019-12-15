@@ -1,8 +1,8 @@
 import React from 'react';
-import Cards from '../Cards';
-import Detail from '../Detail';
+import Cards from '../cardList/Cards';
+import Detail from '../detailInfo/Detail';
 import Contacts from '../../models/Contacts';
-import Empty from '../Empty';
+import Empty from '../detailInfo/Empty';
 import { remove } from '../../constants/notices';
 import { deleteData } from '../../controllers/api';
 import { handleDeleteActive, handleActive } from '../../controllers/utils';

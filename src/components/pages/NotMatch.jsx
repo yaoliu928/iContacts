@@ -1,5 +1,5 @@
 import React from 'react';
-import { notFound } from '../constants/notices';
+import { notFound } from '../../constants/notices';
 function NotMatch() {
   return (
     <div className='notice'>
