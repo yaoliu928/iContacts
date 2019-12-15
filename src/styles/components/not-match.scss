@@ -1,0 +1,7 @@
+@import '../mixin.scss';
+.notice {  
+  height: 100vh;
+  @include flex-center;
+  font-size: 60px;
+  color: $gray;
+}
