@@ -2,7 +2,6 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
 }
 .cards {
   padding: 50px 20px 0;
@@ -38,27 +37,37 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          button {
-            margin: 5px;
-            width: 36%;
-            height: 30%;
-            border-radius: 5px;
-            border: none;
-            color: #fff;
-            font-weight: 600;
-            &:focus {
-              outline: none;
-            }
-            &:nth-child(1) {
-              background: rgb(46, 191, 126);
-            }
-            &:nth-child(2) {
-              background: rgb(210, 65, 30);
-            }
+          }
+        &__button {
+          margin: 5px;
+          width: 36%;
+          height: 30%;
+          border-radius: 5px;
+          border: none;
+          color: #fff;
+          font-weight: 600;
+          &:focus {
+            outline: none;
+          }
+          &--view {
+            background: rgb(46, 191, 126);
+          }
+          &--remove {
+            background: rgb(210, 65, 30);
+          }
+          &--add {
+            background: #4343f4;
+            width: 100%
           }  
         }
         &--active {
           border: 2px solid rgb(46, 191, 126);
+        }
+        &--new {
+          height: 107px;
+          font-size: 50px;
+          font-weight: 200;
+          text-align: center;
         }
         &__hero {
           width: 35px;
@@ -146,6 +155,7 @@
     margin: 4px;
     background-color: rgb(46, 191, 126);
     border-radius: 25px;
+    border: none;
     &:focus {
       outline: 0;
     }   
@@ -212,11 +222,14 @@
     }
   } 
 }
-.empty {  
+.notice {  
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 60px;
   color: #999;
+}
+.form-container {
+  padding: 50px;
 }

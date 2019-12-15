@@ -2,7 +2,7 @@ import React from 'react';
 
 function Empty() {
   return (
-    <div className='empty'>
+    <div className='notice'>
     <div >Sorry, you have no contact ❄❄❄</div>
   </div>)
 }
