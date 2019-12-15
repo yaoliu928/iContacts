@@ -10,8 +10,6 @@ function AddCardButton(props) {
       <div className='single-card--hover'>
         <Link
           to='/add'
-          //handleChange={props.handleChange}
-          //input={props.input}
         >
           <button
             className='single-card__button single-card__button--add'

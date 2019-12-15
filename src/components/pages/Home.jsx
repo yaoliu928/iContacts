@@ -24,7 +24,6 @@ class Home extends React.Component {
   handleRemove = (clickId) => {
     if (window.confirm("😊Do you want to remove this contact?👩")) {
       this.setState((preState) => {
-        console.log(clickId);
         if (preState.contacts.length === 1) {
           return { blank: true };
         }
