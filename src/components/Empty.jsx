@@ -1,11 +1,11 @@
 import React from 'react';
-import { empty } from '../constants/notices';
+import santa from '../assets/icons/santa.svg';
 
 function Empty() {
   return (
-    <div className='notice'>
-    <div >{ empty }</div>
-  </div>)
+    <section className='col-12 col-xl-3 empty'>
+      <img src={santa} alt='santa' />
+    </section>)
 }
 
 export default Empty;

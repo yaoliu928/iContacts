@@ -233,3 +233,13 @@
 .form-container {
   padding: 50px;
 }
+.empty {
+  height: 80vh;
+  border-left: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 20%;
+  }
+}
