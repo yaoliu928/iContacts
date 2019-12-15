@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { notFound } from '../constants/notices';
 function NotMatch() {
   return (
     <div className='notice'>
-    <div >404 -- Sorry, page not found ❄❄❄</div>
+    <div >{ notFound }</div>
   </div>)
 }
 

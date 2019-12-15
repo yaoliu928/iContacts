@@ -1,9 +1,10 @@
 import React from 'react';
+import { empty } from '../constants/notices';
 
 function Empty() {
   return (
     <div className='notice'>
-    <div >Sorry, you have no contact ❄❄❄</div>
+    <div >{ empty }</div>
   </div>)
 }
 

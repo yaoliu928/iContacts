@@ -3,6 +3,7 @@ import Cards from '../Cards';
 import Detail from '../Detail';
 import Contacts from '../../models/Contacts';
 import Empty from '../Empty';
+import { remove } from '../../constants/notices';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,7 @@ class Home extends React.Component {
     });  
   }
   handleRemove = (clickId) => {
-    if (window.confirm("😊Do you want to remove this contact?👩")) {
+    if (window.confirm({remove})) {
 
       this.setState((preState) => {
         Contacts.splice(Contacts.findIndex(({ id }) => id === clickId), 1);

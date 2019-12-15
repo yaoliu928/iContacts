@@ -39,7 +39,7 @@ function Detail(props) {
       <p className='detail__info'>{info}
       </p>
       <div className='detail__language'>
-        <h3>THE LANGUAGES I SPEAK:</h3>
+        <h3>THE LANGUAGES I SPEAK :</h3>
         <ul>
           {
             languages.map((language, index) => {
@@ -54,7 +54,7 @@ function Detail(props) {
         </ul>
       </div>
       <div className='detail__services'>
-        <h3>THE SERVICES I OFFER:</h3>
+        <h3>THE SERVICES I OFFER :</h3>
         <ul className='row'>
           {
             services.map(
