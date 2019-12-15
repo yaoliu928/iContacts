@@ -1,6 +1,7 @@
 ## Contacts
 
 An app you can view, add and remove contacts.<br />
+Deploy link: http://assetlogue-codetest.s3-website-ap-southeast-2.amazonaws.com/<br />
 In the project directory, you can run:
 
 ### `npm start`
