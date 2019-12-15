@@ -23,20 +23,18 @@ class Home extends React.Component {
   }
   handleRemove = (clickId) => {
     if (window.confirm("😊Do you want to remove this contact?👩")) {
+
       this.setState((preState) => {
-        if (preState.contacts.length === 1) {
+        Contacts.splice(Contacts.findIndex(({ id }) => id === clickId), 1);
+        if (!Contacts.length) {
           return { blank: true };
         }
         return {
-          contacts: preState.contacts.filter(
-            ({ id }) => { return (id !== clickId) }
-          ),
+          contacts: Contacts,
           detail:
             clickId === preState.activeId
-              ? preState.contacts.filter(
-                ({ id }) => { return (id !== clickId) }
-              )[0]
-              : preState.contacts[1]
+              ? Contacts[0]
+              : preState.detail
         };
       })
     };
