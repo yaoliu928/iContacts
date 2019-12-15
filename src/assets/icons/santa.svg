@@ -1,0 +1,20 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_2" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" r="1.5" cy="3" cx="20"/>
+  <path id="svg_3" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" d="m18.77,2.17c-1.913,-1.084 -4.071,-1.659 -6.27,-1.67c-3.62,0 -6.56,3.91 -7,5"/>
+  <path id="svg_4" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" d="m18.5,3c0,0 -3.56,0.17 -0.89,2.56"/>
+  <path id="svg_5" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" d="m5.94,5.5l11.12,0c0.877,-0.018 1.664,0.537 1.94,1.37l0.11,0.32c0.177,0.523 -0.104,1.091 -0.627,1.267c-0.104,0.036 -0.213,0.053 -0.323,0.053l-13.27,0c-0.552,0.001 -1.001,-0.445 -1.003,-0.997c0,-0.11 0.017,-0.219 0.053,-0.323l0.06,-0.32c0.276,-0.833 1.063,-1.388 1.94,-1.37z"/>
+  <path id="svg_6" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" d="m5,8.5c0,0 -2.5,1.5 -2.5,3.5s1,2.5 1,2.5s-1,2 0,3c0.521,0.568 1.233,0.924 2,1c0,0 2,5.88 6,4c0,0.77 -1,1 -1,1c4.52,0 7,-5 7,-5c0.767,-0.076 1.479,-0.432 2,-1c1,-1 0,-3 0,-3s1,-0.48 1,-2.5s-2.5,-3.5 -2.5,-3.5"/>
+  <path id="svg_7" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" d="m17.5,8.5c0.568,1.086 0.909,2.277 1,3.5c0.098,1.283 -0.863,2.402 -2.147,2.5c-0.118,0.009 -0.236,0.009 -0.353,0c-1.44,0 -2.25,-1 -4.5,-1s-3.06,1 -4.5,1c-1.283,0.098 -2.402,-0.863 -2.5,-2.147c-0.009,-0.118 -0.009,-0.236 0,-0.353c0.091,-1.223 0.432,-2.414 1,-3.5"/>
+  <path id="svg_8" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" d="m9.5,15.5c0.828,1.105 2.395,1.328 3.5,0.5c0.19,-0.142 0.358,-0.31 0.5,-0.5"/>
+  <circle id="svg_9" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" r="0.5" cy="11" cx="9"/>
+  <circle id="svg_10" fill="none" stroke="#dddddd" stroke-linecap="round" stroke-linejoin="round" r="0.5" cy="11" cx="14"/>
+ </g>
+</svg>

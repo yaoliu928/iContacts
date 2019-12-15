@@ -1,0 +1,9 @@
+@import '../mixin.scss';
+.empty {
+  height: 80vh;
+  border-left: 1px solid $extra-light-gray;
+  @include flex-center;
+  img {
+    height: 20%;
+  }
+}

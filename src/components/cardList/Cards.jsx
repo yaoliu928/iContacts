@@ -25,10 +25,7 @@ function Cards(props) {
             )
           })
         }
-        <AddCardButton
-          //handleChange={props.handleChange}
-          //input={props.input}
-        />
+        <AddCardButton />
       </ul>
     </section>
   )

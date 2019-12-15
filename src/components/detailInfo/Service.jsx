@@ -1,5 +1,5 @@
 import React from 'react';
-import tick from '../assets/icons/tick.svg';
+import tick from '../../assets/icons/tick.svg';
 
 function Service(props) {
   return (
