@@ -1,6 +1,5 @@
 import React from 'react';
 import Contacts from '../../models/Contacts';
-import Multiple from '../Multiple';
 import uuid from 'uuid/v1';
 
 export default class AddContactForm extends React.Component {
@@ -16,6 +15,14 @@ export default class AddContactForm extends React.Component {
       info: '',
       languages: [],
       services: ['heheh'],
+      English: false,
+      Chinese: false,
+      Spanish: false,
+      French: false,
+      Japanese: false,
+      Russian: false,
+      Italian: false,
+      German:false,
       e: false
       ,
       f: false
@@ -40,7 +47,7 @@ export default class AddContactForm extends React.Component {
     })
   }
 
-  handleTest = (event) => {
+  handleLanguage = (event) => {
     event.persist();
     this.setState((preState) => {
       //const value = e.target.value;
@@ -60,7 +67,6 @@ export default class AddContactForm extends React.Component {
     })
   }
 
-
   handleSubmit = (e) => {
     e.preventDefault();
     Contacts.push(this.state);
@@ -70,7 +76,6 @@ export default class AddContactForm extends React.Component {
   render() {
     return (
       <div>
-
         <form className='contain form-container' onSubmit={this.handleSubmit}>
           <div className='form-row'>
             <div className='col-md-3 mb-3'>
@@ -117,35 +122,47 @@ export default class AddContactForm extends React.Component {
           </div>
           <div className='form-row'>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' onChange={this.handleLanguage} value='English' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
+                name='English'
+                onChange={this.handleLanguage}/>
               <label className='form-check-label' >English</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox2'
+              name='Chinese'
+                onChange={this.handleLanguage}/>
               <label className='form-check-label' >Chinese</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
+                name='Spanish'
+                onChange={this.handleLanguage}
+              />
               <label className='form-check-label' >Spanish</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' name='French'
+              onChange={this.handleLanguage} />
               <label className='form-check-label' >French</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' name='Japanese'
+              onChange={this.handleLanguage}/>
               <label className='form-check-label' >Japanese</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' name='Russian'
+              onChange={this.handleLanguage}/>
               <label className='form-check-label' >Russian</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' name='Italian'
+              onChange={this.handleLanguage}/>
               <label className='form-check-label' >Italian</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' name='German'
+              onChange={this.handleLanguage}/>
               <label className='form-check-label' >German</label>
             </div>
           </div>
@@ -189,15 +206,11 @@ export default class AddContactForm extends React.Component {
               <label className='form-check-label' >Conventional</label>
             </div>
           </div>
-
-
-          <Multiple />
-
          <div className='form-check form-check-inline col-md-2 mb-3 '>
           <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
             name='e'
             value='e'
-            onChange={this.handleTest}
+            onChange={this.handleLanguage}
           />
           <label className='form-check-label' >e</label>
         </div>
@@ -205,7 +218,7 @@ export default class AddContactForm extends React.Component {
           <input className='form-check-input' type='checkbox' id='inlineCheckbox2'
           name='f'
             value='f'
-            onChange={this.handleTest}
+            onChange={this.handleLanguage}
           />
           <label className='form-check-label' >f</label>
         </div>
@@ -213,7 +226,7 @@ export default class AddContactForm extends React.Component {
             <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
             name='g'
             value='g'
-            onChange={this.handleTest}
+            onChange={this.handleLanguage}
             />
           <label className='form-check-label' >g</label>
         </div>
