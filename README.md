@@ -1,4 +1,3 @@
-
 ## Contacts
 
 An app you can view, add and remove contacts.<br />
