@@ -61,8 +61,6 @@ class Home extends React.Component {
                 handleClick={this.handleClick}
                 handleRemove={this.handleRemove}
               activeId={this.state.activeId}
-              //handleChange={this.handleChange}
-              //input={this.state.input}
               />
               <Detail
                 detail={this.state.detail}
