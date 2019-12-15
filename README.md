@@ -1,10 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Contacts
 
+An app you can view, add and remove contacts.<br />
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
+## Intro
+
+In this project, React, React-router, Bootstrap and Sass are used.<br />
+It includes both stateless functional components and state components.<br />
+In addition, The webpage is responsive.
+
+An app you can view, add and remove contacts.
+
+### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
