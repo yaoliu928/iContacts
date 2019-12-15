@@ -34,7 +34,8 @@ export default class AddContactForm extends React.Component {
       badCredit: false,
       conventional: false,
     };
-  }
+  };
+  
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
