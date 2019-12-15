@@ -1,12 +1,11 @@
 import React from 'react';
 import Contacts from '../../models/Contacts';
 import uuid from 'uuid/v1';
-
 export default class AddContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id:'',
+      id: '',
       firstName: '',
       lastName: '',
       nmls: '',
@@ -14,65 +13,76 @@ export default class AddContactForm extends React.Component {
       state: '',
       info: '',
       languages: [],
-      services: ['heheh'],
-      English: false,
-      Chinese: false,
-      Spanish: false,
-      French: false,
-      Japanese: false,
-      Russian: false,
-      Italian: false,
-      German:false,
-      e: false
-      ,
-      f: false
-      ,
-      g: false
+      services: [],
+      english: false,
+      chinese: false,
+      spanish: false,
+      french: false,
+      japanese: false,
+      russian: false,
+      italian: false,
+      german: false,
+      lowIncome: false,
+      minorities: false,
+      doctorsHome: false,
+      moveUpBuyers: false,
+      firstHomeBuyers: false,
+      nonQmMortgage: false,
+      vALoans: false,
+      badCredit: false,
+      conventional: false,
     };
-      
-    
   }
-  handleChange = (e) => {
+  handleChange = (event) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     });
-    console.log(e);
   };
-
-  handleLanguage = (e) => {
-    this.setState((preState) => {
-      return {
-
-      }
-    })
-  }
 
   handleLanguage = (event) => {
     event.persist();
     this.setState((preState) => {
-      //const value = e.target.value;
       return {
         ...preState,
         [event.target.name]: !preState[event.target.name],
         languages:
           !preState[event.target.name]
-          ?
-           preState.languages.concat(event.target.name)
-          :
-          preState.languages.filter(
-            (element) => element !== event.target.name 
+            ?
+            preState.languages.concat(event.target.name)
+            :
+            preState.languages.filter(
+              (element) => element !== event.target.name
             ),
-        id:uuid()
+        id: uuid()
       }
     })
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
+  handleService = (event) => {
+    event.persist();
+    this.setState((preState) => {
+      return {
+        ...preState,
+        [event.target.name]: !preState[event.target.name],
+        services:
+          !preState[event.target.name]
+            ?
+            preState.services.concat(event.target.name)
+            :
+            preState.services.filter(
+              (element) => element !== event.target.name
+            ),
+        id: uuid()
+      }
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
     Contacts.push(this.state);
     this.props.history.replace('/');
-    console.log(Contacts);
   }
+
   render() {
     return (
       <div>
@@ -86,19 +96,19 @@ export default class AddContactForm extends React.Component {
               <label >Last name</label>
               <input
                 onChange={this.handleChange} name="lastName" value={this.state.lastName}
-                type='text' className='form-control'  required />
+                type='text' className='form-control' required />
             </div>
             <div className='col-md-3 mb-3'>
               <label >City</label>
               <input
                 onChange={this.handleChange} name="city" value={this.state.city}
-                type='text' className='form-control'  required />
+                type='text' className='form-control' required />
             </div>
             <div className='col-md-3 mb-3'>
               <label >State</label>
               <input
                 onChange={this.handleChange} name="state" value={this.state.state}
-                type='text' className='form-control'  required />
+                type='text' className='form-control' required />
             </div>
           </div>
           <div className='form-row'>
@@ -106,7 +116,7 @@ export default class AddContactForm extends React.Component {
               <label >NMLS</label>
               <input
                 onChange={this.handleChange} name="nmls" value={this.state.nmls}
-                type='text' className='form-control'  required />
+                type='text' className='form-control' required />
             </div>
             <div className='col-md-9 mb-3'>
               <label >Description</label>
@@ -114,128 +124,108 @@ export default class AddContactForm extends React.Component {
                 onChange={this.handleChange} name="info" value={this.state.info}
                 className="form-control" rows="3" required></textarea>
             </div>
-
-
           </div>
           <div className='form-row'>
             <label className='col-md-12 mb-3'>Languages :</label>
           </div>
           <div className='form-row'>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' 
-                name='English'
-                onChange={this.handleLanguage}/>
+              <input className='form-check-input' type='checkbox'
+                name='english'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >English</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' 
-              name='Chinese'
-                onChange={this.handleLanguage}/>
+              <input className='form-check-input' type='checkbox'
+                name='chinese'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >Chinese</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' 
-                name='Spanish'
+              <input className='form-check-input' type='checkbox'
+                name='spanish'
                 onChange={this.handleLanguage}
               />
               <label className='form-check-label' >Spanish</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  name='French'
-              onChange={this.handleLanguage} />
+              <input className='form-check-input' type='checkbox' name='french'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >French</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  name='Japanese'
-              onChange={this.handleLanguage}/>
+              <input className='form-check-input' type='checkbox' name='japanese'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >Japanese</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  name='Russian'
-              onChange={this.handleLanguage}/>
+              <input className='form-check-input' type='checkbox' name='russian'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >Russian</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  name='Italian'
-              onChange={this.handleLanguage}/>
+              <input className='form-check-input' type='checkbox' name='italian'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >Italian</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  name='German'
-              onChange={this.handleLanguage}/>
+              <input className='form-check-input' type='checkbox' name='german'
+                onChange={this.handleLanguage} />
               <label className='form-check-label' >German</label>
             </div>
           </div>
           <div className='form-row'>
             <label className='col-md-12 mb-3'>Services :</label>
             <div className='form-check form-check-inline col-md-2 mb-3  '>
-              <input className='form-check-input' type='checkbox'  value='option1' />
+              <input className='form-check-input' type='checkbox' name='lowIncome'
+                onChange={this.handleService} />
               <label className='form-check-label' >Low Income</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option2' />
+              <input className='form-check-input' type='checkbox' name='minorities'
+                onChange={this.handleService} />
               <label className='form-check-label' >Minorities</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option1' />
-              <label className='form-check-label' >Docters Home</label>
+              <input className='form-check-input' type='checkbox' name='doctorsHome'
+                onChange={this.handleService} />
+              <label className='form-check-label' >Doctors Home</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option2' />
+              <input className='form-check-input' type='checkbox' name='moveUpBuyers'
+                onChange={this.handleService} />
               <label className='form-check-label' >Move-up Buyers</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option2' />
+              <input className='form-check-input' type='checkbox' name='firstHomeBuyers'
+                onChange={this.handleService} />
               <label className='form-check-label' >First Home Buyers</label>
             </div>
 
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option1' />
+              <input className='form-check-input' type='checkbox' name='nonQmMortgage'
+                onChange={this.handleService} />
               <label className='form-check-label' >Non-QM mortgage</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option2' />
+              <input className='form-check-input' type='checkbox' name='vALoans'
+                onChange={this.handleService} />
               <label className='form-check-label' >VA Loans</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option1' />
+              <input className='form-check-input' type='checkbox' name='badCredit'
+                onChange={this.handleService} />
               <label className='form-check-label' >Bad Credit</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox'  value='option2' />
+              <input className='form-check-input' type='checkbox' name='conventional'
+                onChange={this.handleService} />
               <label className='form-check-label' >Conventional</label>
             </div>
           </div>
-         <div className='form-check form-check-inline col-md-2 mb-3 '>
-          <input className='form-check-input' type='checkbox' 
-            name='e'
-            value='e'
-            onChange={this.handleLanguage}
-          />
-          <label className='form-check-label' >e</label>
-        </div>
-        <div className='form-check form-check-inline col-md-2 mb-3 '>
-          <input className='form-check-input' type='checkbox' 
-          name='f'
-            value='f'
-            onChange={this.handleLanguage}
-          />
-          <label className='form-check-label' >f</label>
-        </div>
-        <div className='form-check form-check-inline col-md-2 mb-3 '>
-            <input className='form-check-input' type='checkbox' 
-            name='g'
-            value='g'
-            onChange={this.handleLanguage}
-            />
-          <label className='form-check-label' >g</label>
-        </div>
-
-
           <button
             className='btn btn-primary' type='submit'>Add contact</button>
         </form>
-
       </div>
     );
   }

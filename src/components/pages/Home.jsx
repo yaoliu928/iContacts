@@ -1,22 +1,21 @@
 import React from 'react';
 import Cards from '../Cards';
 import Detail from '../Detail';
-import contacts from '../../models/Contacts';
+import Contacts from '../../models/Contacts';
 import Empty from '../Empty';
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contacts,
-      detail: contacts[0],
+      contacts: Contacts,
+      detail: Contacts[0],
       activeId: '',
       blank: false,
-      //input:'fefe'
     };
   }
   handleClick = (clickId) => {
     this.setState({
-      detail: contacts.find(
+      detail: Contacts.find(
         ({ id }) => id === clickId
       ),
       activeId: clickId
@@ -24,10 +23,6 @@ class Home extends React.Component {
   }
   handleRemove = (clickId) => {
     if (window.confirm("😊Do you want to remove this contact?👩")) {
-      contacts.filter(
-        ({ id }) => { return (id !== clickId) }
-      );
-
       this.setState((preState) => {
         console.log(clickId);
         if (preState.contacts.length === 1) {
