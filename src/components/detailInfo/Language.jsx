@@ -1,8 +1,9 @@
 import React from 'react';
 
 function Language(props) {
+  const { language } = props;
   return (
-    <li >{props.language}</li>
-  )
+    <li>{language}</li>
+  );
 }
 export default Language;

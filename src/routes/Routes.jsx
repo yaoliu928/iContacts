@@ -7,8 +7,8 @@ import NotMatch from '../components/pages/NotMatch';
 
 export default () => (
   <Switch>
-    <Route exact path='/' component={Home} />
-    <Route exact path='/add' component={AddContactForm} />
-    <Route  component={NotMatch} />
+    <Route exact path="/" component={Home} />
+    <Route exact path="/add" component={AddContactForm} />
+    <Route component={NotMatch} />
   </Switch>
-)
+);
