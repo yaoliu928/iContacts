@@ -80,25 +80,25 @@ export default class AddContactForm extends React.Component {
           <div className='form-row'>
             <div className='col-md-3 mb-3'>
               <label >First name</label>
-              <input onChange={this.handleChange} name="firstName" value={this.state.firstName} type='text' className='form-control' id='validationDefault03' required />
+              <input onChange={this.handleChange} name="firstName" value={this.state.firstName} type='text' className='form-control' required />
             </div>
             <div className='col-md-3 mb-3'>
               <label >Last name</label>
               <input
                 onChange={this.handleChange} name="lastName" value={this.state.lastName}
-                type='text' className='form-control' id='validationDefault03' required />
+                type='text' className='form-control'  required />
             </div>
             <div className='col-md-3 mb-3'>
               <label >City</label>
               <input
                 onChange={this.handleChange} name="city" value={this.state.city}
-                type='text' className='form-control' id='validationDefault03' required />
+                type='text' className='form-control'  required />
             </div>
             <div className='col-md-3 mb-3'>
               <label >State</label>
               <input
                 onChange={this.handleChange} name="state" value={this.state.state}
-                type='text' className='form-control' id='validationDefault03' required />
+                type='text' className='form-control'  required />
             </div>
           </div>
           <div className='form-row'>
@@ -106,13 +106,13 @@ export default class AddContactForm extends React.Component {
               <label >NMLS</label>
               <input
                 onChange={this.handleChange} name="nmls" value={this.state.nmls}
-                type='text' className='form-control' id='validationDefault03' required />
+                type='text' className='form-control'  required />
             </div>
             <div className='col-md-9 mb-3'>
               <label >Description</label>
               <textarea
                 onChange={this.handleChange} name="info" value={this.state.info}
-                className="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                className="form-control" rows="3" required></textarea>
             </div>
 
 
@@ -122,46 +122,46 @@ export default class AddContactForm extends React.Component {
           </div>
           <div className='form-row'>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
+              <input className='form-check-input' type='checkbox' 
                 name='English'
                 onChange={this.handleLanguage}/>
               <label className='form-check-label' >English</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2'
+              <input className='form-check-input' type='checkbox' 
               name='Chinese'
                 onChange={this.handleLanguage}/>
               <label className='form-check-label' >Chinese</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
+              <input className='form-check-input' type='checkbox' 
                 name='Spanish'
                 onChange={this.handleLanguage}
               />
               <label className='form-check-label' >Spanish</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' name='French'
+              <input className='form-check-input' type='checkbox'  name='French'
               onChange={this.handleLanguage} />
               <label className='form-check-label' >French</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' name='Japanese'
+              <input className='form-check-input' type='checkbox'  name='Japanese'
               onChange={this.handleLanguage}/>
               <label className='form-check-label' >Japanese</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' name='Russian'
+              <input className='form-check-input' type='checkbox'  name='Russian'
               onChange={this.handleLanguage}/>
               <label className='form-check-label' >Russian</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' name='Italian'
+              <input className='form-check-input' type='checkbox'  name='Italian'
               onChange={this.handleLanguage}/>
               <label className='form-check-label' >Italian</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' name='German'
+              <input className='form-check-input' type='checkbox'  name='German'
               onChange={this.handleLanguage}/>
               <label className='form-check-label' >German</label>
             </div>
@@ -169,45 +169,45 @@ export default class AddContactForm extends React.Component {
           <div className='form-row'>
             <label className='col-md-12 mb-3'>Services :</label>
             <div className='form-check form-check-inline col-md-2 mb-3  '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox'  value='option1' />
               <label className='form-check-label' >Low Income</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox'  value='option2' />
               <label className='form-check-label' >Minorities</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox'  value='option1' />
               <label className='form-check-label' >Docters Home</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox'  value='option2' />
               <label className='form-check-label' >Move-up Buyers</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox'  value='option2' />
               <label className='form-check-label' >First Home Buyers</label>
             </div>
 
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox'  value='option1' />
               <label className='form-check-label' >Non-QM mortgage</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox'  value='option2' />
               <label className='form-check-label' >VA Loans</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' />
+              <input className='form-check-input' type='checkbox'  value='option1' />
               <label className='form-check-label' >Bad Credit</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
-              <input className='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' />
+              <input className='form-check-input' type='checkbox'  value='option2' />
               <label className='form-check-label' >Conventional</label>
             </div>
           </div>
          <div className='form-check form-check-inline col-md-2 mb-3 '>
-          <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
+          <input className='form-check-input' type='checkbox' 
             name='e'
             value='e'
             onChange={this.handleLanguage}
@@ -215,7 +215,7 @@ export default class AddContactForm extends React.Component {
           <label className='form-check-label' >e</label>
         </div>
         <div className='form-check form-check-inline col-md-2 mb-3 '>
-          <input className='form-check-input' type='checkbox' id='inlineCheckbox2'
+          <input className='form-check-input' type='checkbox' 
           name='f'
             value='f'
             onChange={this.handleLanguage}
@@ -223,7 +223,7 @@ export default class AddContactForm extends React.Component {
           <label className='form-check-label' >f</label>
         </div>
         <div className='form-check form-check-inline col-md-2 mb-3 '>
-            <input className='form-check-input' type='checkbox' id='inlineCheckbox1'
+            <input className='form-check-input' type='checkbox' 
             name='g'
             value='g'
             onChange={this.handleLanguage}
