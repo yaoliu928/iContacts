@@ -4,6 +4,7 @@ import Detail from '../Detail';
 import Contacts from '../../models/Contacts';
 import Empty from '../Empty';
 import { remove } from '../../constants/notices';
+import { deleteData } from '../../controllers/api';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -24,12 +25,12 @@ class Home extends React.Component {
   }
   handleRemove = (clickId) => {
     if (window.confirm({remove})) {
-
       this.setState((preState) => {
-        Contacts.splice(Contacts.findIndex(({ id }) => id === clickId), 1);
+        deleteData(Contacts, clickId);
+        //this.handleBlank();
         if (!Contacts.length) {
-          return { blank: true };
-        }
+              return { blank: true };
+            }
         return {
           contacts: Contacts,
           detail:
@@ -40,6 +41,11 @@ class Home extends React.Component {
       })
     };
   };
+  // handleBlank = () => {
+  //   if (!Contacts.length) {
+  //     return { blank: true };
+  //   }
+  // };
   handleChange = (e) => {
     this.setState({
       input:e.target.value

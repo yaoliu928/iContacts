@@ -2,12 +2,9 @@ import React from 'react';
 import avatar from '../assets/avatars/avatar.png';
 import location from '../assets/icons/location.svg';
 import slack from '../assets/logos/slack.svg';
+import { handleCardClass } from '../controllers/utils';
 function Card(props) {
-  const active =
-    props.activeId === props.id
-      ? 'single-card--active'
-      : '';
- 
+  const active = handleCardClass(props);
   return (
     <li className='col-12 col-sm-6 col-lg-3'>
       <div className={`single-card ${active}`}>

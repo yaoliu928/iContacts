@@ -1,6 +1,8 @@
 import React from 'react';
-import Contacts from '../../models/Contacts';
 import uuid from 'uuid/v1';
+import Contacts from '../../models/Contacts';
+import { addData } from '../../controllers/api';
+import { handleMultiSelects } from '../../controllers/utils';
 export default class AddContactForm extends React.Component {
   constructor(props) {
     super(props);
@@ -33,31 +35,28 @@ export default class AddContactForm extends React.Component {
       conventional: false,
     };
   }
-  handleChange = (event) => {
+  handleChange = (e) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
   };
 
-  handleCheckbox = (event) => {
-    event.persist();
+  handleCheckbox = (e) => {
+    e.persist();
     this.setState((preState) => {
-      const { name, value, id } = event.target;
+      const { name, id } = e.target;
       return {
         ...preState,
         [name]: !preState[name],
-        [id]: !preState[name]
-              ?preState.languages.concat(value)
-              :preState.languages.filter(
-              (ele) => ele !== value),
+        [id]: handleMultiSelects(preState, e),
         id: uuid()
       }
     })
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    Contacts.push(this.state); 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    addData(Contacts, this.state);
     this.props.history.replace('/');
   }
 
@@ -179,7 +178,7 @@ export default class AddContactForm extends React.Component {
             <label className='col-md-12 mb-3'>Services :</label>
             <div className='form-check form-check-inline col-md-2 mb-3  '>
               <input className='form-check-input' type='checkbox' name='lowIncome'
-                onChange={this.handleCheckbox} value='Low Income' id='services'/>
+                onChange={this.handleCheckbox} value='Low Income' id='services' />
               <label className='form-check-label' >Low Income</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
@@ -194,33 +193,33 @@ export default class AddContactForm extends React.Component {
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
               <input className='form-check-input' type='checkbox' name='moveUpBuyers'
-                onChange={this.handleCheckbox} value='Move-up Buyers' id='services'/>
+                onChange={this.handleCheckbox} value='Move-up Buyers' id='services' />
               <label className='form-check-label' >Move-up Buyers</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
               <input className='form-check-input' type='checkbox' name='firstHomeBuyers'
-                onChange={this.handleCheckbox} value='First Home Buyers' id='services'/>
+                onChange={this.handleCheckbox} value='First Home Buyers' id='services' />
               <label className='form-check-label' >First Home Buyers</label>
             </div>
 
             <div className='form-check form-check-inline col-md-2 mb-3 '>
               <input className='form-check-input' type='checkbox' name='nonQmMortgage'
-                onChange={this.handleCheckbox} value='Non-QM mortgage' id='services'/>
+                onChange={this.handleCheckbox} value='Non-QM mortgage' id='services' />
               <label className='form-check-label' >Non-QM mortgage</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
               <input className='form-check-input' type='checkbox' name='vALoans'
-                onChange={this.handleCheckbox} value='VA Loans' id='services'/>
+                onChange={this.handleCheckbox} value='VA Loans' id='services' />
               <label className='form-check-label' >VA Loans</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
               <input className='form-check-input' type='checkbox' name='badCredit'
-                onChange={this.handleCheckbox} value='Bad Credit' id='services'/>
+                onChange={this.handleCheckbox} value='Bad Credit' id='services' />
               <label className='form-check-label' >Bad Credit</label>
             </div>
             <div className='form-check form-check-inline col-md-2 mb-3 '>
               <input className='form-check-input' type='checkbox' name='conventional'
-                onChange={this.handleCheckbox} value='Conventional' id='services'/>
+                onChange={this.handleCheckbox} value='Conventional' id='services' />
               <label className='form-check-label' >Conventional</label>
             </div>
           </div>
