@@ -1,5 +1,5 @@
 
-const Contacts = [
+let Contacts = [
   {
     id: 1,
     firstName: 'Chris',
