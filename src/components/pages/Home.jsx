@@ -4,7 +4,7 @@ import Detail from '../detailInfo/Detail';
 import Contacts from '../../models/Contacts';
 import Empty from '../detailInfo/Empty';
 import { remove } from '../../constants/notices';
-import { deleteData } from '../../controllers/api';
+import { deleteData, getData } from '../../controllers/api';
 import { handleDeleteActive, handleActive } from '../../controllers/utils';
 class Home extends React.Component {
   constructor(props) {
@@ -18,9 +18,7 @@ class Home extends React.Component {
   }
   handleClick = (clickId) => {
     this.setState({
-      detail: Contacts.find(
-        ({ id }) => id === clickId
-      ),
+      detail: getData(Contacts, clickId),
       activeId: clickId
     });
   }
