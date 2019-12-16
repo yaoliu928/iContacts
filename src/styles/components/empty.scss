@@ -1,7 +1,7 @@
 @import '../mixin.scss';
 .empty {
   height: 80vh;
-  border-left: 1px solid $extra-light-gray;
+  border-left: 1px solid $mid-light-gray;
   @include flex-center;
   img {
     height: 20%;

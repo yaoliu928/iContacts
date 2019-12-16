@@ -1,10 +1,10 @@
 .detail {
   padding: 20px;
-  border-left: 1px solid $extra-light-gray;
+  border-left: 1px solid $mid-light-gray;
   &__top {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid $extra-light-gray;
+    border-bottom: 1px solid $mid-light-gray;
     h2 {
       margin-bottom: 6px;
       font-weight: 700;
@@ -59,13 +59,13 @@
     }
   }
   &__info {
-    border-bottom: 1px solid $extra-light-gray;
+    border-bottom: 1px solid $mid-light-gray;
     padding: 16px 0;
     color: $dark-gray;
     font-size: $font-size-sm;
   }
   &__language { 
-    border-bottom: 1px solid $extra-light-gray; 
+    border-bottom: 1px solid $mid-light-gray; 
     padding-bottom: 20px;
     color: $gray;    
     h3 {
